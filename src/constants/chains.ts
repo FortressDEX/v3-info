@@ -1,5 +1,5 @@
 export enum SupportedChainId {
-  CANDLE = 534,  // added Candle 2022/06/06
+  CANDLE = 534, //added Candle 2022/06/06
   MAINNET = 1,
   ROPSTEN = 3,
   RINKEBY = 4,
@@ -13,7 +13,7 @@ export enum SupportedChainId {
 }
 
 export const ALL_SUPPORTED_CHAIN_IDS: SupportedChainId[] = [
-  SupportedChainId.CANDLE,  // added Candle 2022/06/06
+  SupportedChainId.CANDLE, //added Candle 2022/06/06
   SupportedChainId.MAINNET,
   SupportedChainId.ROPSTEN,
   SupportedChainId.RINKEBY,
