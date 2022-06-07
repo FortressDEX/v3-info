@@ -1,9 +1,12 @@
+import CANDLE_LOGO_URL from '../assets/images/candle-logo.png'  // added Candle 2022/06/06
 import OPTIMISM_LOGO_URL from '../assets/images/optimism.svg'
 import ARBITRUM_LOGO_URL from '../assets/images/arbitrum.svg'
 import ETHEREUM_LOGO_URL from '../assets/images/ethereum-logo.png'
 import POLYGON_LOGO_URL from '../assets/images/polygon-logo.png'
 
+
 export enum SupportedNetwork {
+  CANDLE,  // added Candle 2022/06/06
   ETHEREUM,
   ARBITRUM,
   OPTIMISM,
@@ -20,6 +23,18 @@ export type NetworkInfo = {
   primaryColor: string
   secondaryColor: string
   blurb?: string
+}
+
+export const CandleNetworkInfo: NetworkInfo = {  // added Candle 2022/06/06
+  id: SupportedNetwork.CANDLE,
+  route: 'candle',
+  pathName: '/candle/',
+  name: 'Candle',
+  bgColor: '#8247e5',
+  primaryColor: '#8247e5',
+  secondaryColor: '#FB7876',
+  imageURL: CANDLE_LOGO_URL,
+  blurb: '',
 }
 
 export const EthereumNetworkInfo: NetworkInfo = {
@@ -69,7 +84,9 @@ export const PolygonNetworkInfo: NetworkInfo = {
   blurb: '',
 }
 
+
 export const SUPPORTED_NETWORK_PATH_NAMES = [
+  CandleNetworkInfo.pathName,  // added Candle 2022/06/06
   EthereumNetworkInfo.pathName,
   ArbitrumNetworkInfo.pathName,
   OptimismNetworkInfo.pathName,
@@ -77,6 +94,7 @@ export const SUPPORTED_NETWORK_PATH_NAMES = [
 ]
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
+  CandleNetworkInfo,  // added Candle 2022/06/06
   EthereumNetworkInfo,
   PolygonNetworkInfo,
   OptimismNetworkInfo,
